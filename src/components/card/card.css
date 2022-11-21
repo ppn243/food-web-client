@@ -1,0 +1,67 @@
+.card {
+  height: 400px;
+  width: 260px;
+  overflow: hidden;
+}
+.card:hover .card_content {
+  transform: translateY(-30%);
+  background-color: #86bc42;
+}
+.card:hover .card_content .card_text .money {
+  color: #fff;
+}
+.card img {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+.card .card_content {
+  padding: 10px 0;
+  transform: translateY(-10%);
+  background-color: #fff;
+  transition: all 1s;
+}
+.card .card_content .card_text {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+}
+.card .card_content .card_text .card_link {
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 18px;
+  color: #000;
+  transition: all 0.5s;
+}
+.card .card_content .card_text .card_link:hover {
+  color: #fff;
+}
+.card .card_content .card_text .money {
+  margin: 5px 10px;
+  color: #333333;
+  font-size: 14px;
+  line-height: 24px;
+  text-decoration: line-through;
+}
+.card .card_content .card_text .money_sale {
+  text-decoration: none;
+  font-size: 18px;
+  color: #86bc42;
+}
+.card .card_content .detail {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+.card .card_content .detail .detail_link {
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 10px;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 20px;
+}
