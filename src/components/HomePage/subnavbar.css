@@ -10,6 +10,7 @@
     text-align: center;
     display: table;
     border-bottom: 1px solid #ededed;
+    width: 50%;
   }
   .tab .btn_1 {
     position: relative;

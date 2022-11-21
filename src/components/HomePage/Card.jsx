@@ -2,10 +2,10 @@ import "./card.css";
 import { Link } from "react-router-dom";
 import img from "../../assets/img.png";
 import "bootstrap/dist/css/bootstrap.css";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import Card from "react-bootstrap/Card";
+// import Container from "react-bootstrap/Container";
+// import Row from "react-bootstrap/Row";
+// import Col from "react-bootstrap/Col";
+// import Card from "react-bootstrap/Card";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const Cards = () => {
@@ -34,25 +34,27 @@ const Cards = () => {
     //     <Col></Col>
     //   </Row>
     // </Container>
-    <div class="card">
-      <img src={img} alt=""></img>
-      <div class="card_content">
-        <p class="card_text">
-          <Link href="#" class="card_link">
-            Nho Xanh
-          </Link>
-        </p>
-        <p class="card_text">
-          <span class="money money_sale">12,000₫</span>{" "}
-          <span class="money">15,000₫</span>
-        </p>
-        <div class="detail">
-          <Link href="#" class="detail_link">
-            Chi Tiet
-          </Link>
+    <Link to="/details">
+      <div class="card">
+        <img src={img} alt=""></img>
+        <div class="card_content">
+          <p class="card_text">
+            <Link href="#" class="card_link">
+              Nho Xanh
+            </Link>
+          </p>
+          <p class="card_text">
+            <span class="money money_sale">12,000₫</span>{" "}
+            <span class="money">15,000₫</span>
+          </p>
+          <div class="detail">
+            <Link href="#" class="detail_link">
+              Chi Tiết
+            </Link>
+          </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 export default Cards;

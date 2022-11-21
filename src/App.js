@@ -1,18 +1,22 @@
 import React from "react";
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
-import Cards from "./components/card/Card";
-import Navbar from "./components/navbar/Navbar";
-import SubNavbar from "./components/suv_navbar/SubNavbar";
-import Product from "./components/hot_products/Product";
+import Home from "./components/HomePage/Home";
+import DetailPage from "./components/DetailPage/DetailPage";
+import VegetalePage from "./components/VegetablePage/Vegetables";
+import OrganicPage from "./components/OrganicPage/OrganicVegetables";
+import FoodPage from "./components/FoodPage/Food";
 
 function App() {
   return (
     <Router>
-      <Navbar />
-      <SubNavbar />
-      <Cards />
-      <Product />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/details" element={<DetailPage />} />
+        <Route path="/foodpage" element={<FoodPage />} />
+        <Route path="/vegetables" element={<VegetalePage />} />
+        <Route path="/organicvegetable" element={<OrganicPage />} />
+      </Routes>
     </Router>
   );
 }

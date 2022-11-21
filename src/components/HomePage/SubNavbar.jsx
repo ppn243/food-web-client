@@ -17,13 +17,13 @@ const SubNavbar = () => {
       <Row>
         <div className="tab">
           <button className="active btn_1">
-            <Link href="../pages/Vegetables.jsx">hoa quả</Link>
+            <Link to="/foodpage">hoa quả</Link>
           </button>
           <button className="btn_1">
-            <Link href="../pages/OrganicVegetables.jsx">thực phẩm khô</Link>
+            <Link to="/organicvegetable">thực phẩm khô</Link>
           </button>
           <button className="btn_1">
-            <Link href="../pages/Food.jsx">rau hữu cơ</Link>
+            <Link to="/vegetables">rau hữu cơ</Link>
           </button>
         </div>
       </Row>
