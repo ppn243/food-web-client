@@ -1,60 +1,48 @@
 import "./card.css";
+import React from "react";
 import { Link } from "react-router-dom";
-import img from "../../assets/img.png";
 import "bootstrap/dist/css/bootstrap.css";
-// import Container from "react-bootstrap/Container";
-// import Row from "react-bootstrap/Row";
-// import Col from "react-bootstrap/Col";
-// import Card from "react-bootstrap/Card";
 import "bootstrap/dist/css/bootstrap.min.css";
+import axios from "axios";
+import { useState } from "react";
+import { useEffect } from "react";
 
 const Cards = () => {
+  const [posts, setPosts] = useState([]);
+
+  const getPost = async () => {
+    await axios
+      .get("http://food-web-api-1.herokuapp.com/api/get-products")
+      .then((resp) => {
+        setPosts(resp.data);
+      });
+  };
+
+  useEffect(() => {
+    getPost();
+  }, []);
+
   return (
-    // <Container>
-    //   <Row>
-    //     <Col>
-    //       <Card className="card" style={{ width: "18rem" }}>
-    //         <Card.Img className="card_img" variant="top" src={img} />
-    //         <div className="card_body">
-    //           <Card.Title className="card_hover">
-    //             <Link>Nho Xanh</Link>
-    //             <div className="span_text">
-    //               <span>12,000₫</span>
-    //               <span>15,000₫</span>
-    //             </div>
-    //             <div className="btn">
-    //               <button>Chi tiết</button>
-    //             </div>
-    //           </Card.Title>
-    //         </div>
-    //       </Card>
-    //     </Col>
-    //     <Col></Col>
-    //     <Col></Col>
-    //     <Col></Col>
-    //   </Row>
-    // </Container>
-    <Link to="/details">
-      <div class="card">
-        <img src={img} alt=""></img>
-        <div class="card_content">
-          <p class="card_text">
-            <Link href="#" class="card_link">
-              Nho Xanh
+    <Link to="/details" className="card__container">
+      {posts.map((post, key) => (
+        <div className="card" key={post.name}>
+          <img src={post.image} alt="" />
+          <div className="card_content">
+            <Link href="#" className="card_link">
+              <p className="card_text">{post.name}</p>
             </Link>
-          </p>
-          <p class="card_text">
-            <span class="money money_sale">12,000₫</span>{" "}
-            <span class="money">15,000₫</span>
-          </p>
-          <div class="detail">
-            <Link href="#" class="detail_link">
-              Chi Tiết
+            <p className="card_text">
+              <span className="money money_sale">{post.promotion_price}</span>{" "}
+              <span className="money">{post.unit_price}</span>
+            </p>
+            <Link href="#" className="detail_link">
+              <div className="detail">Chi Tiết</div>
             </Link>
           </div>
         </div>
-      </div>
+      ))}
     </Link>
   );
 };
+
 export default Cards;
