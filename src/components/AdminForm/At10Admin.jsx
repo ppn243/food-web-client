@@ -7,7 +7,6 @@ import "datatables.net-dt/js/dataTables.dataTables";
 import "datatables.net-dt/css/jquery.dataTables.min.css";
 import Button from "react-bootstrap/Button";
 import Navbar from "../HomePage/Navbar";
-// import "./del-product.js"
 
 const At10Admin = () => {
   return (
