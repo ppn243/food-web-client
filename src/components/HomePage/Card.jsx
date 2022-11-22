@@ -23,7 +23,7 @@ const Cards = () => {
   }, []);
 
   return (
-    <Link to="/details" className="card__container">
+    <div className="card__container">
       {posts.map((post, key) => (
         <div className="card" key={post.name}>
           <img src={post.image} alt="" />
@@ -35,13 +35,13 @@ const Cards = () => {
               <span className="money money_sale">{post.promotion_price}</span>{" "}
               <span className="money">{post.unit_price}</span>
             </p>
-            <Link href="#" className="detail_link">
+            <Link to={`/details/${post.id}`} className="detail_link">
               <div className="detail">Chi Tiết</div>
             </Link>
           </div>
         </div>
       ))}
-    </Link>
+    </div>
   );
 };
 

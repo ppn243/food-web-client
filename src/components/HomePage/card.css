@@ -1,14 +1,15 @@
 .card__container {
-  display: flex;
-  flex: wrap;
+  display: grid;
+  grid-template-columns:auto auto auto auto;
+  width: 80%;
+  margin: 0 auto;
+  gap: 40px;
 }
 
 .card {
-  height: 500px;
-  width: 260px;
+  height: 380px;
+  width: 200px;
   overflow: hidden;
-  flex: 1 0 10%;
-  margin: 5px;
 }
 .card:hover .card_content {
   transform: translateY(-30%);
@@ -19,12 +20,12 @@
 }
 .card img {
   width: 100%;
-  height: 300px;
+  height:350px;
   border: none;
 }
 .card .card_content {
   padding: 10px 0;
-  transform: translateY(-10%);
+  transform: translateY(3 0%);
   background-color: #fff;
   transition: all 1s;
   height: 200px;
@@ -38,15 +39,15 @@
   width: 100%;
   margin: 0 auto;
 }
-.card .card_content .card_text .card_link {
+.card__container .card .card_content .card_link .card_text  {
   text-decoration: none;
   text-align: center;
   text-transform: uppercase;
   font-size: 18px;
-  color: #000;
+  color: rgb(0, 0, 0);
   transition: all 0.5s;
 }
-.card .card_content .card_text .card_link:hover {
+.card .card_content .card_link:hover .card_text  {
   color: #fff;
 }
 .card .card_content .card_text .money {
@@ -61,12 +62,12 @@
   font-size: 18px;
   color: #86bc42;
 }
-.card .card_content .detail {
+.card .card_content .detail_link {
   display: flex;
   justify-content: center;
   padding: 10px;
 }
-.card .card_content .detail .detail_link {
+.card .card_content .detail_link .detail  {
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
