@@ -42,12 +42,12 @@ const DetailPage = () => {
           </Col>
           <Col>
             <h1>{posts.name}</h1>
-            <p class="card_text">
-              <span class="money">{posts.unit_price}</span>
-              <span class="money money_sale">{posts.promotion_price}</span>{" "}
+            <p className="card_text">
+              <span className="money">{posts.unit_price}</span>
+              <span className="money money_sale">{posts.promotion_price}</span>{" "}
             </p>
-            <p class="text_content">{posts.description}</p>
-            <Button className="btn">Chi Tiết</Button>
+            <p className="text_content">{posts.description}</p>
+            <Button className="btn1">Chi Tiết</Button>
           </Col>
         </Row>
       </Container>

@@ -16,7 +16,7 @@ const SubNavbar = () => {
       </Row>
       <Row>
         <div className="tab">
-          <button className="active btn_1">
+          <button className="btn_1">
             <Link to="/foodpage">hoa quả</Link>
           </button>
           <button className="btn_1">

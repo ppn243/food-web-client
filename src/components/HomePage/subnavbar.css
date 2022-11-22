@@ -29,10 +29,10 @@
   .tab .btn_1:hover {
     color: #86bc42;
   }
-  .tab .btn_1.active {
+  /* .tab .btn_1.active {
     color: #86bc42;
-  }
-  .tab .btn_1:hover:not(.active) {
+  } */
+  .tab .btn_1:target {
     color: #86bc42;
   }
   .tab .btn_1::after{
