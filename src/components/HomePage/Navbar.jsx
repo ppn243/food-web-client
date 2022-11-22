@@ -21,7 +21,7 @@ const Navbar = () => {
               <Link to="/">Liên hệ</Link>
             </li>
             <li>
-              <Link to="/">Hướng dẫn</Link>
+              <Link to="/at10admin">Hướng dẫn</Link>
             </li>
             <li>
             </li>

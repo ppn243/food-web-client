@@ -6,6 +6,7 @@ import DetailPage from "./components/DetailPage/DetailPage";
 import VegetalePage from "./components/VegetablePage/Vegetables";
 import OrganicPage from "./components/OrganicPage/OrganicVegetables";
 import FoodPage from "./components/FoodPage/Food";
+import At10Admin from "./components/AdminForm/At10Admin";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/foodpage" element={<FoodPage />} />
         <Route path="/vegetables" element={<VegetalePage />} />
         <Route path="/organicvegetable" element={<OrganicPage />} />
+        <Route path="/at10admin" element={<At10Admin />} />
       </Routes>
     </Router>
   );
